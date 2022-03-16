@@ -12,6 +12,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     @Override
+    //to fix persistent depreciated API error
+    @SuppressWarnings("deprecation")
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
