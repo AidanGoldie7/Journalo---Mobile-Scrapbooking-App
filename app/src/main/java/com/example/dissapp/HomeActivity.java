@@ -17,7 +17,8 @@ public class HomeActivity extends AppCompatActivity {
 
 
         //assign button variable to created button
-        Button button = (Button)findViewById(R.id.btn_journals);
+        Button button = (Button) findViewById(R.id.btn_journals);
+        Button button1 = (Button) findViewById(R.id.btn_mvp);
 
 
         //on button click
@@ -28,7 +29,16 @@ public class HomeActivity extends AppCompatActivity {
                 openActivityJournals();
             }
         });
+
+        button1.setOnClickListener(new View.OnClickListener(){
+            @Override
+                    public void onClick(View view) {
+                openActivityDisplay();
+            }
+    });
     }
+
+
 
 
     public void openActivityJournals(){
@@ -38,5 +48,15 @@ public class HomeActivity extends AppCompatActivity {
 
         //display toast message to inform of relocation to journals page
         Toast.makeText(this, "Journals Page", Toast.LENGTH_SHORT).show();
+    }
+
+
+    public void openActivityDisplay(){
+        //intent to navigate to journals page
+        Intent intent = new Intent(HomeActivity.this, DisplayActivity.class);
+        startActivity(intent);
+
+        //display toast message to inform of relocation to journals page
+        Toast.makeText(this, "Display Page", Toast.LENGTH_SHORT).show();
     }
 }
