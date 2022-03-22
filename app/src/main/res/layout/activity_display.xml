@@ -5,13 +5,15 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:weightSum="1"
     tools:context=".DisplayActivity">
 
 
     <TextView
         android:id="@+id/item_title"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="0.05"
         android:ellipsize="end"
         android:gravity="center"
         android:maxLines="1"
@@ -20,22 +22,54 @@
     <Spinner
         android:id="@+id/selector"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dip"
+        android:layout_weight="0.06"
         android:layout_marginTop="5.0dip" />
-
-
-    <androidx.appcompat.widget.LinearLayoutCompat
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-        android:layout_weight="1">
 
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvPlaces"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dip"
+        android:layout_weight="0.875"
         android:clipToPadding="false" />
-</androidx.appcompat.widget.LinearLayoutCompat>
+
+        <LinearLayout
+        android:id="@+id/laytbtns"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/LstPeriodOptions" >
+
+            <Button
+                android:id="@+id/btn_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_margin="5dp"
+                android:layout_weight=".05"
+                android:text="Home" />
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_margin="5dp"
+                android:layout_weight="0.05"
+                android:text="Add" />
+
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="0.05"
+                android:text="Clear" />
+        </LinearLayout>
+
+
+
 </LinearLayout>
 
 

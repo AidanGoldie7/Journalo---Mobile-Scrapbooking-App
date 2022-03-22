@@ -4,10 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -41,6 +43,24 @@ public class DisplayActivity extends AppCompatActivity implements AdapterView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display);
 
+
+
+
+
+        //BUTTON CODE
+        Button buttonHome = (Button)findViewById(R.id.btn_home);
+
+        //when clicked
+        buttonHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //click handling code
+                openActivityHome();
+            }
+        });
+
+
+
         //RECYCLER VIEW CODE
         //name can be changed later
         recyclerView = findViewById(R.id.rvPlaces);
@@ -50,9 +70,15 @@ public class DisplayActivity extends AppCompatActivity implements AdapterView.On
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
+
         //adapter
         /*placesAdapter = new PlacesAdapter(this, placesNameList, placesDescriptionList, parisImages);
         recyclerView.setAdapter(placesAdapter);*/
+
+
+
+
+
 
 
         //SPINNER CODE
@@ -68,10 +94,9 @@ public class DisplayActivity extends AppCompatActivity implements AdapterView.On
     public void onItemSelected(AdapterView<?> parent, View view, int i, long l) {
         //display toast message based on what item is selected
         String text = parent.getItemAtPosition(i).toString();
-        Toast.makeText(parent.getContext(), text, Toast.LENGTH_SHORT).show();
 
 
-        if (text.equals("--Select Journal--"))
+        if (text.equals("------"))
         {
             //adapter
             placesAdapter = new PlacesAdapter(this, noNameList, noDescriptionList, noImages);
@@ -82,11 +107,24 @@ public class DisplayActivity extends AppCompatActivity implements AdapterView.On
             //adapter
             placesAdapter = new PlacesAdapter(this, parisNameList, parisDescriptionList, parisImages);
             recyclerView.setAdapter(placesAdapter);
+
+            Toast.makeText(parent.getContext(), text, Toast.LENGTH_SHORT).show();
         }
     }
 
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) {
 
+    }
+
+
+
+    public void openActivityHome(){
+        //intent to navigate to journals page
+        Intent intent = new Intent(DisplayActivity.this, HomeActivity.class);
+        startActivity(intent);
+
+        //display toast message to inform of relocation to journals page
+        Toast.makeText(this, "Back to base", Toast.LENGTH_SHORT).show();
     }
 }

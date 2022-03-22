@@ -3,7 +3,7 @@
 
     //spinner options
     <string-array name = "Places">
-        <item>--Select Journal--</item>
+        <item>------</item>
         <item>Paris</item>
         <item>New York</item>
     </string-array>
