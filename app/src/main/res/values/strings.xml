@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">DissApp</string>
+
+    //spinner options
+    <string-array name = "Places">
+        <item>--Select Journal--</item>
+        <item>Paris</item>
+        <item>New York</item>
+    </string-array>
 </resources>
