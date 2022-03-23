@@ -35,8 +35,10 @@ public class DisplayActivity extends AppCompatActivity implements AdapterView.On
     String[] parisDescriptionList = {"pic of eiffel tower", "pic of city","We vistited the louvre today it was lovely", "great view from the top"};
     int[] parisImages = {R.drawable.paris, R.drawable.paris1, R.drawable.louvre, R.drawable.arc};
 
-    //BERLIN DATA
-    int[] berlinImages = {};
+    //NEW YORK DATA
+    String[] newyorkNameList = {"Statue of Liberty"};
+    String[] newyorkDescriptionList = {"pic of statue of liberty"};
+    int[] newyorkImages = {R.drawable.statueoflib};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -115,6 +117,14 @@ public class DisplayActivity extends AppCompatActivity implements AdapterView.On
         {
             //adapter
             placesAdapter = new PlacesAdapter(this, parisNameList, parisDescriptionList, parisImages);
+            recyclerView.setAdapter(placesAdapter);
+
+            Toast.makeText(parent.getContext(), text, Toast.LENGTH_SHORT).show();
+        }
+        else if (text.equals("New York"))
+        {
+            //adapter
+            placesAdapter = new PlacesAdapter(this, newyorkNameList, newyorkDescriptionList, newyorkImages);
             recyclerView.setAdapter(placesAdapter);
 
             Toast.makeText(parent.getContext(), text, Toast.LENGTH_SHORT).show();
