@@ -49,6 +49,7 @@ public class DisplayActivity extends AppCompatActivity implements AdapterView.On
 
         //BUTTON CODE
         Button buttonHome = (Button)findViewById(R.id.btn_home);
+        Button buttonAdd = (Button)findViewById(R.id.btn_add);
 
         //when clicked
         buttonHome.setOnClickListener(new View.OnClickListener() {
@@ -56,6 +57,14 @@ public class DisplayActivity extends AppCompatActivity implements AdapterView.On
             public void onClick(View view) {
                 //click handling code
                 openActivityHome();
+            }
+        });
+
+        buttonAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //click handling code
+                openActivityJournals();
             }
         });
 
@@ -126,5 +135,14 @@ public class DisplayActivity extends AppCompatActivity implements AdapterView.On
 
         //display toast message to inform of relocation to journals page
         Toast.makeText(this, "Back to base", Toast.LENGTH_SHORT).show();
+    }
+
+    public void openActivityJournals(){
+        //intent to navigate to journals page
+        Intent intent = new Intent(DisplayActivity.this, JournalsActivity.class);
+        startActivity(intent);
+
+        //display toast message to inform of relocation to journals page
+        Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
     }
 }

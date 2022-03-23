@@ -51,13 +51,13 @@
                 android:text="Home" />
 
             <Button
-                android:id="@+id/button5"
+                android:id="@+id/btn_add"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="5dp"
                 android:layout_margin="5dp"
+                android:layout_marginRight="5dp"
                 android:layout_weight="0.05"
-                android:text="Add" />
+                android:text="+" />
 
             <Button
                 android:id="@+id/button6"
