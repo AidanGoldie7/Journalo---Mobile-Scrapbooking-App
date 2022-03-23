@@ -48,16 +48,20 @@
                 android:layout_marginRight="5dp"
                 android:layout_margin="5dp"
                 android:layout_weight=".05"
+
                 android:text="Home" />
 
             <Button
                 android:id="@+id/btn_add"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="2dp"
+                android:layout_height="53dp"
                 android:layout_margin="5dp"
                 android:layout_marginRight="5dp"
                 android:layout_weight="0.05"
-                android:text="+" />
+                android:background="@drawable/circle"
+                android:text="+"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
             <Button
                 android:id="@+id/button6"
