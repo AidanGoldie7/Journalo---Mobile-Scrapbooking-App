@@ -134,7 +134,7 @@ public class DisplayActivity extends AppCompatActivity implements AdapterView.On
         startActivity(intent);
 
         //display toast message to inform of relocation to journals page
-        Toast.makeText(this, "Back to base", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Home", Toast.LENGTH_SHORT).show();
     }
 
     public void openActivityJournals(){
@@ -143,6 +143,6 @@ public class DisplayActivity extends AppCompatActivity implements AdapterView.On
         startActivity(intent);
 
         //display toast message to inform of relocation to journals page
-        Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Add Journal Entry", Toast.LENGTH_SHORT).show();
     }
 }

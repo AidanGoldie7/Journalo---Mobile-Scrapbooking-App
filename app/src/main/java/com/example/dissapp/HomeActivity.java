@@ -47,7 +47,7 @@ public class HomeActivity extends AppCompatActivity {
         startActivity(intent);
 
         //display toast message to inform of relocation to journals page
-        Toast.makeText(this, "Journals Page", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Add Journal Entry", Toast.LENGTH_SHORT).show();
     }
 
 
@@ -57,6 +57,6 @@ public class HomeActivity extends AppCompatActivity {
         startActivity(intent);
 
         //display toast message to inform of relocation to journals page
-        Toast.makeText(this, "Display Page", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "My Journals", Toast.LENGTH_SHORT).show();
     }
 }
