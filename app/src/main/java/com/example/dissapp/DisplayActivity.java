@@ -107,7 +107,7 @@ public class DisplayActivity extends AppCompatActivity implements AdapterView.On
         String text = parent.getItemAtPosition(i).toString();
 
 
-        if (text.equals("------"))
+        if (text.equals(""))
         {
             //adapter
             placesAdapter = new PlacesAdapter(this, noNameList, noDescriptionList, noImages);
@@ -135,6 +135,11 @@ public class DisplayActivity extends AppCompatActivity implements AdapterView.On
     public void onNothingSelected(AdapterView<?> adapterView) {
 
     }
+
+
+
+
+
 
 
 

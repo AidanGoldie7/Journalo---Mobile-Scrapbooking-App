@@ -8,13 +8,14 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
-public class JournalsActivity extends AppCompatActivity{
+public class JournalsActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
 
 
     @Override
@@ -30,6 +31,7 @@ public class JournalsActivity extends AppCompatActivity{
         Button buttonJournals = (Button)findViewById(R.id.btn_journals);
         final TextView title = (TextView)findViewById(R.id.txt_title);
         final TextView description = (TextView)findViewById(R.id.txt_des);
+        final TextView journalTitle = (TextView)findViewById(R.id.addNew);
 
 
 
@@ -59,18 +61,26 @@ public class JournalsActivity extends AppCompatActivity{
             }
         });
 
-
-
         //clear button click
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //click handling code
+                journalTitle.setText("");
                 title.setText("");
                 description.setText("");
                 clickCLear();
             }
         });
+
+
+        //SPINNER CODE
+        Spinner spinner = (Spinner) findViewById(R.id.spinner_Journals);
+
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.Places, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+        spinner.setOnItemSelectedListener(this);
     }
 
 
@@ -103,5 +113,36 @@ public class JournalsActivity extends AppCompatActivity{
     public void clickCLear(){
         //display toast message
         Toast.makeText(this, "Cleared", Toast.LENGTH_SHORT).show();
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    @Override
+    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+//display toast message based on what item is selected
+        String text = adapterView.getItemAtPosition(i).toString();
+        EditText addNewJournal = (EditText)findViewById(R.id.addNew);
+
+        if (text.equals(""))
+        {
+            addNewJournal.setVisibility(TextView.VISIBLE);
+        }
+        else{
+            addNewJournal.setVisibility(TextView.INVISIBLE);
+        }
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> adapterView) {
+
     }
 }
