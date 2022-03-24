@@ -18,6 +18,8 @@ import org.w3c.dom.Text;
 public class JournalsActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
 
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +34,7 @@ public class JournalsActivity extends AppCompatActivity implements AdapterView.O
         final TextView title = (TextView)findViewById(R.id.txt_title);
         final TextView description = (TextView)findViewById(R.id.txt_des);
         final TextView journalTitle = (TextView)findViewById(R.id.addNew);
+        final TextView journalSelection = (TextView)findViewById(R.id.txt_choice);
 
 
 
@@ -66,7 +69,6 @@ public class JournalsActivity extends AppCompatActivity implements AdapterView.O
             @Override
             public void onClick(View view) {
                 //click handling code
-                journalTitle.setText("");
                 title.setText("");
                 description.setText("");
                 clickCLear();
@@ -135,10 +137,13 @@ public class JournalsActivity extends AppCompatActivity implements AdapterView.O
         if (text.equals(""))
         {
             addNewJournal.setVisibility(TextView.VISIBLE);
+            addNewJournal.setText(text);
         }
-        else{
-            addNewJournal.setVisibility(TextView.INVISIBLE);
-        }
+        else
+            {
+            addNewJournal.setVisibility(TextView.VISIBLE);
+            addNewJournal.setText(text);
+            }
     }
 
     @Override
