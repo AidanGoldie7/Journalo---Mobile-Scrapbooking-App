@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -17,7 +18,7 @@ import org.w3c.dom.Text;
 
 public class JournalsActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
 
-
+    private static int SPLASH_TIME_OUT = 3000;
 
 
     @Override
@@ -30,6 +31,7 @@ public class JournalsActivity extends AppCompatActivity implements AdapterView.O
         Button button = (Button)findViewById(R.id.btn_home);
         Button button1 = (Button)findViewById(R.id.btn_clear);
         Button buttonupload = (Button)findViewById(R.id.btnUpload);
+        Button buttonSubmit = (Button)findViewById(R.id.btn_submit);
         Button buttonJournals = (Button)findViewById(R.id.btn_journals);
         final TextView title = (TextView)findViewById(R.id.txt_title);
         final TextView description = (TextView)findViewById(R.id.txt_des);
@@ -76,6 +78,17 @@ public class JournalsActivity extends AppCompatActivity implements AdapterView.O
         });
 
 
+
+        //home button click
+        buttonSubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //click handling code
+                clickSubmit();
+            }
+        });
+
+
         //SPINNER CODE
         Spinner spinner = (Spinner) findViewById(R.id.spinner_Journals);
 
@@ -115,6 +128,11 @@ public class JournalsActivity extends AppCompatActivity implements AdapterView.O
     public void clickCLear(){
         //display toast message
         Toast.makeText(this, "Cleared", Toast.LENGTH_SHORT).show();
+    }
+
+    public void clickSubmit(){
+        //display toast message
+        Toast.makeText(this, "Saving to cloud...", Toast.LENGTH_SHORT).show();
     }
 
 

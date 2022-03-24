@@ -52,6 +52,9 @@ public class DisplayActivity extends AppCompatActivity implements AdapterView.On
         //BUTTON CODE
         Button buttonHome = (Button)findViewById(R.id.btn_home);
         Button buttonAdd = (Button)findViewById(R.id.btn_add);
+        Button buttonClear = (Button)findViewById(R.id.btn_clear);
+        spinner = (Spinner) findViewById(R.id.selector);
+
 
         //when clicked
         buttonHome.setOnClickListener(new View.OnClickListener() {
@@ -67,6 +70,15 @@ public class DisplayActivity extends AppCompatActivity implements AdapterView.On
             public void onClick(View view) {
                 //click handling code
                 openActivityJournals();
+            }
+        });
+
+        buttonClear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //click handling code
+                spinner.setSelection(0);
+                clickClear();
             }
         });
 
@@ -93,8 +105,6 @@ public class DisplayActivity extends AppCompatActivity implements AdapterView.On
 
 
         //SPINNER CODE
-        spinner = (Spinner) findViewById(R.id.selector);
-
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.Places, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
@@ -159,5 +169,11 @@ public class DisplayActivity extends AppCompatActivity implements AdapterView.On
 
         //display toast message to inform of relocation to journals page
         Toast.makeText(this, "Add Journal Entry", Toast.LENGTH_SHORT).show();
+    }
+
+
+    public void clickClear(){
+        //display toast message to inform of relocation to journals page
+        Toast.makeText(this, "Page Cleared", Toast.LENGTH_SHORT).show();
     }
 }
