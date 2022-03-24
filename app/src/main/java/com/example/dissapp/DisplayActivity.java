@@ -23,12 +23,12 @@ public class DisplayActivity extends AppCompatActivity implements AdapterView.On
     Spinner spinner;
 
 
-    //data for no journal selection on spinner
+
+    //DATA TO DISPLAY DEPENDING ON DROP DOWN LIST
+    //NO SELECTION DATA
     String[] noNameList = {"No Journal Selected"};
     String[] noDescriptionList = {"Please select a journal"};
     int[] noImages = {R.drawable.whitebackground};
-
-
 
     //PARIS DATA
     String[] parisNameList = {"Eiffel Tower", "City","Louvre","Arc De Triomphe"};
@@ -40,14 +40,14 @@ public class DisplayActivity extends AppCompatActivity implements AdapterView.On
     String[] newyorkDescriptionList = {"pic of statue of liberty"};
     int[] newyorkImages = {R.drawable.statueoflib};
 
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display);
-
-
-
-
 
         //BUTTON CODE
         Button buttonHome = (Button)findViewById(R.id.btn_home);

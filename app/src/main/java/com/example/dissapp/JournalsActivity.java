@@ -5,13 +5,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
-public class JournalsActivity extends AppCompatActivity {
+public class JournalsActivity extends AppCompatActivity{
 
 
     @Override
@@ -23,9 +26,11 @@ public class JournalsActivity extends AppCompatActivity {
         //assign button variable to buttons
         Button button = (Button)findViewById(R.id.btn_home);
         Button button1 = (Button)findViewById(R.id.btn_clear);
+        Button buttonupload = (Button)findViewById(R.id.btnUpload);
         Button buttonJournals = (Button)findViewById(R.id.btn_journals);
         final TextView title = (TextView)findViewById(R.id.txt_title);
         final TextView description = (TextView)findViewById(R.id.txt_des);
+
 
 
         //home button click
@@ -46,6 +51,14 @@ public class JournalsActivity extends AppCompatActivity {
             }
         });
 
+        buttonupload.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //click handling code
+                clickUpload();
+            }
+        });
+
 
 
         //clear button click
@@ -55,6 +68,7 @@ public class JournalsActivity extends AppCompatActivity {
                 //click handling code
                 title.setText("");
                 description.setText("");
+                clickCLear();
             }
         });
     }
@@ -79,5 +93,15 @@ public class JournalsActivity extends AppCompatActivity {
 
         //display toast message to inform of relocation to journals page
         Toast.makeText(this, "My Journals", Toast.LENGTH_SHORT).show();
+    }
+
+    public void clickUpload(){
+        //display toast message
+        Toast.makeText(this, "Opening Photos", Toast.LENGTH_SHORT).show();
+    }
+
+    public void clickCLear(){
+        //display toast message
+        Toast.makeText(this, "Cleared", Toast.LENGTH_SHORT).show();
     }
 }
