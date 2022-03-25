@@ -31,9 +31,9 @@ public class DisplayActivity extends AppCompatActivity implements AdapterView.On
     int[] noImages = {R.drawable.whitebackground};
 
     //PARIS DATA
-    String[] parisNameList = {"Eiffel Tower", "City","Louvre","Arc De Triomphe"};
-    String[] parisDescriptionList = {"pic of eiffel tower", "pic of city","We vistited the louvre today it was lovely", "great view from the top"};
-    int[] parisImages = {R.drawable.paris, R.drawable.paris1, R.drawable.louvre, R.drawable.arc};
+    String[] parisNameList = {"Eiffel Tower", "City","Louvre","Arc De Triomphe", "Hotel Room View!"};
+    String[] parisDescriptionList = {"pic of eiffel tower", "pic of city","We vistited the louvre today it was lovely", "great view from the top", "The hotel room we stayed in was excellent, amazing view from the balcony and the staff were very accomodating"};
+    int[] parisImages = {R.drawable.paris, R.drawable.paris1, R.drawable.louvre, R.drawable.arc, R.drawable.balcony};
 
     //NEW YORK DATA
     String[] newyorkNameList = {"Statue of Liberty", "Empire State Building"};
