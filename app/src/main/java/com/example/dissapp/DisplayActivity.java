@@ -27,21 +27,25 @@ public class DisplayActivity extends AppCompatActivity implements AdapterView.On
     //DATA TO DISPLAY DEPENDING ON DROP DOWN LIST
     //NO SELECTION DATA
     String[] noNameList = {"No Journal Selected"};
+    String[] noDateList = {""};
     String[] noDescriptionList = {"Please select a journal"};
     int[] noImages = {R.drawable.whitebackground};
 
     //PARIS DATA
-    String[] parisNameList = {"Eiffel Tower", "City","Louvre","Arc De Triomphe", "Hotel Room View!"};
+    String[] parisNameList = {"Eiffel Tower", "City","Louvre","Arc De Triomphe", "Hotel Room View"};
+    String[] parisDateList = {"04/05/2016","04/05/2016","04/05/2016","04/05/2016","04/05/2016"};
     String[] parisDescriptionList = {"pic of eiffel tower", "pic of city","We vistited the louvre today it was lovely", "great view from the top", "The hotel room we stayed in was excellent, amazing view from the balcony and the staff were very accomodating"};
     int[] parisImages = {R.drawable.paris, R.drawable.paris1, R.drawable.louvre, R.drawable.arc, R.drawable.balcony};
 
     //NEW YORK DATA
     String[] newyorkNameList = {"Statue of Liberty", "Empire State Building"};
+    String[] newyorkDateList = {"04/05/2016","04/05/2016"};
     String[] newyorkDescriptionList = {"pic of statue of liberty", "Amazing view"};
     int[] newyorkImages = {R.drawable.statueoflib, R.drawable.empire};
 
     //TOKYO DATA
     String [] tokyoNameList = {"Mount Fuji", "Street Culture","Squid Market"};
+    String[] tokyoDateList = {"04/05/2016","04/05/2016","04/05/2016"};
     String [] tokyoDescriptionList = {"Insane view from Yokohama", "Busy street in central tokyo", "Went to the Squid market today to try new things"};
     int[] tokyoImages = {R.drawable.mtfuji, R.drawable.tokyostreet, R.drawable.squid};
 
@@ -125,13 +129,13 @@ public class DisplayActivity extends AppCompatActivity implements AdapterView.On
         if (text.equals(""))
         {
             //adapter
-            placesAdapter = new PlacesAdapter(this, noNameList, noDescriptionList, noImages);
+            placesAdapter = new PlacesAdapter(this, noNameList, noDateList, noDescriptionList, noImages);
             recyclerView.setAdapter(placesAdapter);
         }
         else if (text.equals("Paris"))
         {
             //adapter
-            placesAdapter = new PlacesAdapter(this, parisNameList, parisDescriptionList, parisImages);
+            placesAdapter = new PlacesAdapter(this, parisNameList, parisDateList, parisDescriptionList, parisImages);
             recyclerView.setAdapter(placesAdapter);
 
             Toast.makeText(parent.getContext(), text, Toast.LENGTH_SHORT).show();
@@ -139,7 +143,7 @@ public class DisplayActivity extends AppCompatActivity implements AdapterView.On
         else if (text.equals("New York"))
         {
             //adapter
-            placesAdapter = new PlacesAdapter(this, newyorkNameList, newyorkDescriptionList, newyorkImages);
+            placesAdapter = new PlacesAdapter(this, newyorkNameList, newyorkDateList, newyorkDescriptionList, newyorkImages);
             recyclerView.setAdapter(placesAdapter);
 
             Toast.makeText(parent.getContext(), text, Toast.LENGTH_SHORT).show();
@@ -147,7 +151,7 @@ public class DisplayActivity extends AppCompatActivity implements AdapterView.On
         else if (text.equals("Tokyo"))
         {
             //adapter
-            placesAdapter = new PlacesAdapter(this, tokyoNameList, tokyoDescriptionList, tokyoImages);
+            placesAdapter = new PlacesAdapter(this, tokyoNameList, tokyoDateList, tokyoDescriptionList, tokyoImages);
             recyclerView.setAdapter(placesAdapter);
 
             Toast.makeText(parent.getContext(), text, Toast.LENGTH_SHORT).show();

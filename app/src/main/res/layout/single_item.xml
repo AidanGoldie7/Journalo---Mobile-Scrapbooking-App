@@ -21,8 +21,9 @@
         <TextView
             android:id="@+id/textView"
             android:layout_width="190dp"
-            android:layout_height="28dp"
+            android:layout_height="15dp"
             android:text=""
+            android:textColor="#8F000000"
             android:textSize="15sp" />
 
         <TextView
@@ -33,6 +34,13 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="15sp" />
 
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="190dp"
+            android:layout_height="15dp"
+            android:text="Date"
+            android:textSize="10sp" />
 
         <TextView
             android:id="@+id/textView2"
