@@ -36,9 +36,14 @@ public class DisplayActivity extends AppCompatActivity implements AdapterView.On
     int[] parisImages = {R.drawable.paris, R.drawable.paris1, R.drawable.louvre, R.drawable.arc};
 
     //NEW YORK DATA
-    String[] newyorkNameList = {"Statue of Liberty"};
-    String[] newyorkDescriptionList = {"pic of statue of liberty"};
-    int[] newyorkImages = {R.drawable.statueoflib};
+    String[] newyorkNameList = {"Statue of Liberty", "Empire State Building"};
+    String[] newyorkDescriptionList = {"pic of statue of liberty", "Amazing view"};
+    int[] newyorkImages = {R.drawable.statueoflib, R.drawable.empire};
+
+    //TOKYO DATA
+    String [] tokyoNameList = {"Mount Fuji", "Street Culture","Squid Market"};
+    String [] tokyoDescriptionList = {"Insane view from Yokohama", "Busy street in central tokyo", "Went to the Squid market today to try new things"};
+    int[] tokyoImages = {R.drawable.mtfuji, R.drawable.tokyostreet, R.drawable.squid};
 
 
 
@@ -135,6 +140,14 @@ public class DisplayActivity extends AppCompatActivity implements AdapterView.On
         {
             //adapter
             placesAdapter = new PlacesAdapter(this, newyorkNameList, newyorkDescriptionList, newyorkImages);
+            recyclerView.setAdapter(placesAdapter);
+
+            Toast.makeText(parent.getContext(), text, Toast.LENGTH_SHORT).show();
+        }
+        else if (text.equals("Tokyo"))
+        {
+            //adapter
+            placesAdapter = new PlacesAdapter(this, tokyoNameList, tokyoDescriptionList, tokyoImages);
             recyclerView.setAdapter(placesAdapter);
 
             Toast.makeText(parent.getContext(), text, Toast.LENGTH_SHORT).show();
