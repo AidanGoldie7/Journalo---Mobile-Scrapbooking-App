@@ -54,14 +54,16 @@
             <Button
                 android:id="@+id/btn_add"
                 style="?android:attr/borderlessButtonStyle"
-                android:layout_width="2dp"
-                android:layout_height="53dp"
+                android:layout_width="0.25dp"
+                android:layout_height="55dp"
                 android:layout_margin="5dp"
                 android:layout_marginRight="5dp"
                 android:layout_weight="0.05"
                 android:background="@drawable/circle"
                 android:text="+"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="35sp"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/btn_clear"

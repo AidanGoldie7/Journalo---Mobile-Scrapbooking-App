@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.SystemClock;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -25,7 +26,6 @@ public class JournalsActivity extends AppCompatActivity implements AdapterView.O
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_journals);
-
 
         //assign button variable to buttons
         Button button = (Button)findViewById(R.id.btn_home);
@@ -84,7 +84,13 @@ public class JournalsActivity extends AppCompatActivity implements AdapterView.O
             @Override
             public void onClick(View view) {
                 //click handling code
-                clickSubmit();
+                if (TextUtils.isEmpty(title.getText()) || TextUtils.isEmpty(description.getText()) || TextUtils.isEmpty(journalTitle.getText()))
+                {
+                    submitFail();
+                }
+                else{
+                    clickSubmit();
+                }
             }
         });
 
@@ -133,6 +139,11 @@ public class JournalsActivity extends AppCompatActivity implements AdapterView.O
     public void clickSubmit(){
         //display toast message
         Toast.makeText(this, "Saving to cloud...", Toast.LENGTH_SHORT).show();
+    }
+
+    public void submitFail(){
+        //display toast message
+        Toast.makeText(this, "Please ensure all text fields are filled in!", Toast.LENGTH_SHORT).show();
     }
 
 
