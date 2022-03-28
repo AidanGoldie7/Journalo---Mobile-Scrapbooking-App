@@ -50,6 +50,13 @@ public class DisplayActivity extends AppCompatActivity implements AdapterView.On
     int[] tokyoImages = {R.drawable.mtfuji, R.drawable.tokyostreet, R.drawable.squid};
 
 
+    //CRAIG & KIMS WEDDING
+    String [] weddingNameList = {"Groom waiting for his bride", "Happy couple at the alter", "Grandkids at the alter!", "Cutting the cake!", "Rob stole the grooms seat!"};
+    String[] weddingDateList = {"18/04/2022","18/04/2022","18/04/2022","18/04/2022","18/04/2022"};
+    String [] weddingDescriptionList = {"Craig and his best man Chris waiting nervously for kim to come down the Aisle. Such a happy day for the whole family!", "Craig and Kim at the alter! the view was spectacular from the Bowfield Hotel and Country Club!", "Aidan, Rebecca and Hannah stealing the alter once the professional photos had been taken! It's so lovely to see them all dressed up together","Craig and Kim cutting their wedding cake together at the evening event of their special day", "Rob sitting on the Grooms seat after the evening meal! we had a lovely roast chicken meal!"};
+    int[] weddingImages = {R.drawable.craigwaiting, R.drawable.craigandkim, R.drawable.kidsatalter, R.drawable.cuttingcake, R.drawable.robonchair};
+
+
 
 
 
@@ -152,6 +159,14 @@ public class DisplayActivity extends AppCompatActivity implements AdapterView.On
         {
             //adapter
             placesAdapter = new PlacesAdapter(this, tokyoNameList, tokyoDateList, tokyoDescriptionList, tokyoImages);
+            recyclerView.setAdapter(placesAdapter);
+
+            Toast.makeText(parent.getContext(), text, Toast.LENGTH_SHORT).show();
+        }
+        else if (text.equals("Craig and Kims Wedding"))
+        {
+            //adapter
+            placesAdapter = new PlacesAdapter(this, weddingNameList, weddingDateList, weddingDescriptionList, weddingImages);
             recyclerView.setAdapter(placesAdapter);
 
             Toast.makeText(parent.getContext(), text, Toast.LENGTH_SHORT).show();
