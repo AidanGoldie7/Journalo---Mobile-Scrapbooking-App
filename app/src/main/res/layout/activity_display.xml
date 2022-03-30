@@ -31,48 +31,76 @@
         android:id="@+id/rvPlaces"
         android:layout_width="match_parent"
         android:layout_height="0dip"
-        android:layout_weight="0.875"
+        android:layout_weight="0.9"
         android:clipToPadding="false" />
 
-        <LinearLayout
+    <LinearLayout
+        android:id="@+id/layclear"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/LstPeriodOptions"
+        android:layout_marginLeft="7.5dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="7.5dp"
+        android:layout_marginBottom="-25dp"
+
+        android:layout_weight="0.02">
+
+        <Button
+            android:id="@+id/btn_clear"
+            android:layout_width="135dp"
+            android:layout_height="50dp"
+            android:layout_margin="0dp"
+            android:layout_marginTop="7.5dp"
+            android:text="Clear"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
         android:id="@+id/laytbtns"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_below="@+id/LstPeriodOptions" >
+        android:layout_below="@+id/LstPeriodOptions"
+        android:layout_marginLeft="7.5dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="7.5dp"
+        android:layout_marginBottom="30dp"
+        android:layout_weight="0.02">
 
-            <Button
-                android:id="@+id/btn_home"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="5dp"
-                android:layout_margin="5dp"
-                android:layout_weight=".05"
+        <Button
+            android:id="@+id/btn_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_weight=".125"
 
-                android:text="Home" />
+            android:text="Home" />
 
-            <Button
-                android:id="@+id/btn_add"
-                style="?android:attr/borderlessButtonStyle"
-                android:layout_width="0.25dp"
-                android:layout_height="55dp"
-                android:layout_margin="5dp"
-                android:layout_marginRight="5dp"
-                android:layout_weight="0.05"
-                android:background="@drawable/circle"
-                android:text="+"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                android:textSize="35sp"
-                android:textStyle="bold" />
+        <Button
+            android:id="@+id/btn_add"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_margin="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="0.02"
+            android:background="@drawable/circle"
+            android:text="+"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="35sp"
+            android:textStyle="bold" />
 
-            <Button
-                android:id="@+id/btn_clear"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:layout_weight="0.05"
-                android:text="Clear" />
-        </LinearLayout>
+        <Button
+            android:id="@+id/btn_myJournals"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".05"
+            android:text="My Journals" />
+
+    </LinearLayout>
 
 
 

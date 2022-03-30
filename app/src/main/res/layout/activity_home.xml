@@ -9,8 +9,8 @@
     <Button
         android:id="@+id/btn_journals"
         style="?android:attr/borderlessButtonStyle"
-        android:layout_width="57dp"
-        android:layout_height="51dp"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
         android:background="@drawable/circle"
         android:lineSpacingExtra="12sp"
         android:text="+"
@@ -27,15 +27,15 @@
 
     <Button
         android:id="@+id/btn_mvp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="135dp"
+        android:layout_height="50dp"
         android:text="My Journals"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.942"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.638" />
+        app:layout_constraintVertical_bias="0.969" />
 
     <TextView
         android:id="@+id/textView3"
@@ -49,10 +49,23 @@
         android:typeface="monospace"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.481"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.391" />
+        app:layout_constraintVertical_bias="0.556" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="307dp"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:text="The app built to keep all your memories together, safely."
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.528"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.443" />
 
     <TextView
         android:id="@+id/textView4"
@@ -65,34 +78,9 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.198" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="307dp"
-        android:layout_height="45dp"
-        android:gravity="center"
-        android:text="The app built to keep all your memories together, safely."
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.287" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="238dp"
-        android:layout_height="46dp"
-        android:gravity="center"
-        android:text="For more information, see the About Page."
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="#75000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintVertical_bias="0.352" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

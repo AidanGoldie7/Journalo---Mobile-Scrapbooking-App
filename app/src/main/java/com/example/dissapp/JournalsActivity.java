@@ -36,6 +36,7 @@ public class JournalsActivity extends AppCompatActivity implements AdapterView.O
         final TextView title = (TextView)findViewById(R.id.txt_title);
         final TextView description = (TextView)findViewById(R.id.txt_des);
         final TextView journalTitle = (TextView)findViewById(R.id.addNew);
+        final TextView journalDate = (TextView)findViewById(R.id.txtDate);
         final TextView journalSelection = (TextView)findViewById(R.id.txt_choice);
 
 
@@ -84,7 +85,7 @@ public class JournalsActivity extends AppCompatActivity implements AdapterView.O
             @Override
             public void onClick(View view) {
                 //click handling code
-                if (TextUtils.isEmpty(title.getText()) || TextUtils.isEmpty(description.getText()) || TextUtils.isEmpty(journalTitle.getText()))
+                if (TextUtils.isEmpty(title.getText()) || TextUtils.isEmpty(description.getText()) || TextUtils.isEmpty(journalTitle.getText()) || TextUtils.isEmpty((journalDate.getText())))
                 {
                     submitFail();
                 }
