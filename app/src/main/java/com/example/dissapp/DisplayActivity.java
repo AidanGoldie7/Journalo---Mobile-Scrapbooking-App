@@ -57,6 +57,13 @@ public class DisplayActivity extends AppCompatActivity implements AdapterView.On
     int[] weddingImages = {R.drawable.craigwaiting, R.drawable.craigandkim, R.drawable.kidsatalter, R.drawable.cuttingcake, R.drawable.robonchair};
 
 
+    //Spring Picnic
+    String [] picnicNameList = {"Milo with his baguette", "Making Wishes!", "Give me my hat back!"};
+    String[] picnicDateList = {"25/04/2022","25/04/2022","25/04/2022"};
+    String [] picnicDescriptionList = {"Milo tucking into a fresh baguette with mum and dad!", "Chris found some dandelions for Milo and Sarah to have some fun with!", "Chris stole Sarahs hat so Milo wrestled his to get it back for his mum!"};
+    int[] picnicImages = {R.drawable.picnic, R.drawable.picnic2, R.drawable.stolehat};
+
+
 
 
 
@@ -171,6 +178,15 @@ public class DisplayActivity extends AppCompatActivity implements AdapterView.On
 
             Toast.makeText(parent.getContext(), text, Toast.LENGTH_SHORT).show();
         }
+        else if (text.equals("Picnic with family"))
+        {
+            //adapter
+            placesAdapter = new PlacesAdapter(this, picnicNameList, picnicDateList, picnicDescriptionList, picnicImages);
+            recyclerView.setAdapter(placesAdapter);
+
+            Toast.makeText(parent.getContext(), text, Toast.LENGTH_SHORT).show();
+        }
+
     }
 
     @Override
