@@ -19,7 +19,7 @@ public class HomeActivity extends AppCompatActivity {
         //assign button variable to created button
         Button button = (Button) findViewById(R.id.btn_journals);
         Button button1 = (Button) findViewById(R.id.btn_mvp);
-
+        Button buttonHome = (Button) findViewById(R.id.btn_home);
 
         //on button click
         button.setOnClickListener(new View.OnClickListener() {
@@ -36,7 +36,17 @@ public class HomeActivity extends AppCompatActivity {
                 openActivityDisplay();
             }
     });
+
+        buttonHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //click handling code
+                openHome();
+            }
+        });
+
     }
+
 
 
 
@@ -58,5 +68,11 @@ public class HomeActivity extends AppCompatActivity {
 
         //display toast message to inform of relocation to journals page
         Toast.makeText(this, "My Journals", Toast.LENGTH_SHORT).show();
+    }
+
+
+    public void openHome(){
+        //display toast message to inform of relocation to journals page
+        Toast.makeText(this, "Home", Toast.LENGTH_SHORT).show();
     }
 }

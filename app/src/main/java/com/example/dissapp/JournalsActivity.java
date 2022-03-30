@@ -31,6 +31,7 @@ public class JournalsActivity extends AppCompatActivity implements AdapterView.O
         Button button = (Button)findViewById(R.id.btn_home);
         Button button1 = (Button)findViewById(R.id.btn_clear);
         Button buttonupload = (Button)findViewById(R.id.btnUpload);
+        Button buttonAdd = (Button)findViewById(R.id.btn_journals2);
         Button buttonSubmit = (Button)findViewById(R.id.btn_submit);
         Button buttonJournals = (Button)findViewById(R.id.btn_journals);
         final TextView title = (TextView)findViewById(R.id.txt_title);
@@ -75,6 +76,14 @@ public class JournalsActivity extends AppCompatActivity implements AdapterView.O
                 title.setText("");
                 description.setText("");
                 clickCLear();
+            }
+        });
+
+        buttonAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //click handling code
+                openActivityAddJournal();
             }
         });
 
@@ -145,6 +154,11 @@ public class JournalsActivity extends AppCompatActivity implements AdapterView.O
     public void submitFail(){
         //display toast message
         Toast.makeText(this, "Please ensure all text fields are filled in!", Toast.LENGTH_SHORT).show();
+    }
+
+    public void openActivityAddJournal(){
+        //display toast message
+        Toast.makeText(this, "Add Journal Entry", Toast.LENGTH_SHORT).show();
     }
 
 

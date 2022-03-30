@@ -76,6 +76,7 @@ public class DisplayActivity extends AppCompatActivity implements AdapterView.On
         Button buttonHome = (Button)findViewById(R.id.btn_home);
         Button buttonAdd = (Button)findViewById(R.id.btn_add);
         Button buttonClear = (Button)findViewById(R.id.btn_clear);
+        Button buttonJournals = (Button)findViewById(R.id.btn_myJournals);
         spinner = (Spinner) findViewById(R.id.selector);
 
 
@@ -102,6 +103,14 @@ public class DisplayActivity extends AppCompatActivity implements AdapterView.On
                 //click handling code
                 spinner.setSelection(0);
                 clickClear();
+            }
+        });
+
+        buttonJournals.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //click handling code
+                openJournals();
             }
         });
 
@@ -223,5 +232,10 @@ public class DisplayActivity extends AppCompatActivity implements AdapterView.On
     public void clickClear(){
         //display toast message to inform of relocation to journals page
         Toast.makeText(this, "Page Cleared", Toast.LENGTH_SHORT).show();
+    }
+
+    public void openJournals(){
+        //display toast message to inform of relocation to journals page
+        Toast.makeText(this, "My Journals", Toast.LENGTH_SHORT).show();
     }
 }
