@@ -29,12 +29,12 @@ public class DisplayActivity extends AppCompatActivity implements AdapterView.On
     String[] noNameList = {"No Journal Selected"};
     String[] noDateList = {""};
     String[] noDescriptionList = {"Please select a journal"};
-    int[] noImages = {R.drawable.whitesquare};
+    int[] noImages = {R.drawable.noimage};
 
     //PARIS DATA
     String[] parisNameList = {"Eiffel Tower", "City","Louvre","Arc De Triomphe", "Hotel Room View"};
     String[] parisDateList = {"04/05/2016","04/05/2016","04/05/2016","04/05/2016","04/05/2016"};
-    String[] parisDescriptionList = {"pic of eiffel tower", "pic of city","We vistited the louvre today it was lovely", "great view from the top", "The hotel room we stayed in was excellent, amazing view from the balcony and the staff were very accommodating"};
+    String[] parisDescriptionList = {"pic of eiffel tower", "pic of city","We visited the louvre today it was lovely", "great view from the top", "The hotel room we stayed in was excellent, amazing view from the balcony and the staff were very accommodating"};
     int[] parisImages = {R.drawable.paris, R.drawable.paris1, R.drawable.louvre, R.drawable.arc, R.drawable.balcony};
 
     //NEW YORK DATA
@@ -52,8 +52,8 @@ public class DisplayActivity extends AppCompatActivity implements AdapterView.On
     //BUDAPEST DATA
     String [] budaNameList = {"River Danube", "Budapest Sign","Parliament", "Hero's Square", "Parliament at night"};
     String[] budaDateList = {"15/08/2018","16/08/2018","17/08/2018", "17/08/2018", "17/08/2018"};
-    String [] budaDescriptionList = {"Explored the city with Fraser and James today. Crossed over the River Danube, check the view!", "Met up with some friends, Josh and Craig for some lunch and ran into this sign!", "A great view of the Parliament building on our walk toward Hero's Square today", "Hero's Square was built in 1896 for the Millennium of the Magyar Conquest of Hungary", "Took an evening walk to explore the city, parliament was all lit up! Had to get a photo!"};
-    int[] budaImages = {R.drawable.danube, R.drawable.budasign, R.drawable.parliament, R.drawable.herossquare, R.drawable.boysatparliament};
+    String [] budaDescriptionList = {"Explored the city with Fraser and James today. Climbed the biggest hill in Budapest, Gellért Hill, check the view of the River Danube!", "Met up with some friends, Josh and Craig for some lunch and ran into this sign!", "A great view of the Parliament building on our walk toward Hero's Square today", "Hero's Square was built in 1896 for the Millennium of the Magyar Conquest of Hungary", "Took an evening walk to explore the city, parliament was all lit up! Had to get a photo!"};
+    int[] budaImages = {R.drawable.danubee, R.drawable.budasign, R.drawable.parliament, R.drawable.herossquare, R.drawable.boysatparliament};
 
 
     //CRAIG & KIMS WEDDING

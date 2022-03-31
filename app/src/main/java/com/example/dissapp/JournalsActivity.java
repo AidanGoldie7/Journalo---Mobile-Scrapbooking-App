@@ -42,7 +42,6 @@ public class JournalsActivity extends AppCompatActivity implements AdapterView.O
         final TextView description = (TextView)findViewById(R.id.txt_des);
         final TextView journalTitle = (TextView)findViewById(R.id.addNew);
         final TextView journalDate = (TextView)findViewById(R.id.txtDate);
-        final TextView journalSelection = (TextView)findViewById(R.id.txt_choice);
 
 
 
