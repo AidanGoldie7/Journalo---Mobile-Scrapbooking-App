@@ -34,7 +34,7 @@ public class DisplayActivity extends AppCompatActivity implements AdapterView.On
     //PARIS DATA
     String[] parisNameList = {"Eiffel Tower", "City","Louvre","Arc De Triomphe", "Hotel Room View"};
     String[] parisDateList = {"04/05/2016","04/05/2016","04/05/2016","04/05/2016","04/05/2016"};
-    String[] parisDescriptionList = {"pic of eiffel tower", "pic of city","We vistited the louvre today it was lovely", "great view from the top", "The hotel room we stayed in was excellent, amazing view from the balcony and the staff were very accomodating"};
+    String[] parisDescriptionList = {"pic of eiffel tower", "pic of city","We vistited the louvre today it was lovely", "great view from the top", "The hotel room we stayed in was excellent, amazing view from the balcony and the staff were very accommodating"};
     int[] parisImages = {R.drawable.paris, R.drawable.paris1, R.drawable.louvre, R.drawable.arc, R.drawable.balcony};
 
     //NEW YORK DATA
@@ -48,6 +48,12 @@ public class DisplayActivity extends AppCompatActivity implements AdapterView.On
     String[] tokyoDateList = {"04/05/2016","04/05/2016","04/05/2016"};
     String [] tokyoDescriptionList = {"Insane view from Yokohama", "Busy street in central tokyo", "Went to the Squid market today to try new things"};
     int[] tokyoImages = {R.drawable.mtfuji, R.drawable.tokyostreet, R.drawable.squid};
+
+    //BUDAPEST DATA
+    String [] budaNameList = {"River Danube", "Budapest Sign","Parliament", "Hero's Square", "Parliament at night"};
+    String[] budaDateList = {"15/08/2018","16/08/2018","17/08/2018", "17/08/2018", "17/08/2018"};
+    String [] budaDescriptionList = {"Explored the city with Fraser and James today. Crossed over the River Danube, check the view!", "Met up with some friends, Josh and Craig for some lunch and ran into this sign!", "A great view of the Parliament building on our walk toward Hero's Square today", "Hero's Square was built in 1896 for the Millennium of the Magyar Conquest of Hungary", "Took an evening walk to explore the city, parliament was all lit up! Had to get a photo!"};
+    int[] budaImages = {R.drawable.danube, R.drawable.budasign, R.drawable.parliament, R.drawable.herossquare, R.drawable.boysatparliament};
 
 
     //CRAIG & KIMS WEDDING
@@ -175,6 +181,14 @@ public class DisplayActivity extends AppCompatActivity implements AdapterView.On
         {
             //adapter
             placesAdapter = new PlacesAdapter(this, tokyoNameList, tokyoDateList, tokyoDescriptionList, tokyoImages);
+            recyclerView.setAdapter(placesAdapter);
+
+            Toast.makeText(parent.getContext(), text, Toast.LENGTH_SHORT).show();
+        }
+        else if (text.equals("Budapest"))
+        {
+            //adapter
+            placesAdapter = new PlacesAdapter(this, budaNameList, budaDateList, budaDescriptionList, budaImages);
             recyclerView.setAdapter(placesAdapter);
 
             Toast.makeText(parent.getContext(), text, Toast.LENGTH_SHORT).show();
