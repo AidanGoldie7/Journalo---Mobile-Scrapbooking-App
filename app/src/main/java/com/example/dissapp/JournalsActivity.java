@@ -3,6 +3,8 @@ package com.example.dissapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.media.Image;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.text.TextUtils;
@@ -11,6 +13,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -34,6 +37,7 @@ public class JournalsActivity extends AppCompatActivity implements AdapterView.O
         Button buttonAdd = (Button)findViewById(R.id.btn_journals2);
         Button buttonSubmit = (Button)findViewById(R.id.btn_submit);
         Button buttonJournals = (Button)findViewById(R.id.btn_journals);
+        final ImageView imagePreview = (ImageView)findViewById(R.id.imageThumb);
         final TextView title = (TextView)findViewById(R.id.txt_title);
         final TextView description = (TextView)findViewById(R.id.txt_des);
         final TextView journalTitle = (TextView)findViewById(R.id.addNew);
@@ -76,6 +80,7 @@ public class JournalsActivity extends AppCompatActivity implements AdapterView.O
                 title.setText("");
                 description.setText("");
                 journalDate.setText("");
+                imagePreview.setImageResource(R.drawable.noimage);
                 clickCLear();
             }
         });
@@ -139,6 +144,9 @@ public class JournalsActivity extends AppCompatActivity implements AdapterView.O
 
     public void clickUpload(){
         //display toast message
+        Intent cameraIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+        startActivityForResult(cameraIntent, 1010);
+
         Toast.makeText(this, "Opening Photos", Toast.LENGTH_SHORT).show();
     }
 
@@ -166,7 +174,13 @@ public class JournalsActivity extends AppCompatActivity implements AdapterView.O
 
 
 
-
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == 1010) {
+            Bitmap image = (Bitmap) data.getExtras().get("data");
+            ImageView imageview = (ImageView) findViewById(R.id.imageThumb); //sets imageview as the bitmap
+            imageview.setImageBitmap(image);
+        }
+    }
 
 
 
