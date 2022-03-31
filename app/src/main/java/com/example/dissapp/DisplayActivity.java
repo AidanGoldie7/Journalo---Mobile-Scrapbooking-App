@@ -29,7 +29,7 @@ public class DisplayActivity extends AppCompatActivity implements AdapterView.On
     String[] noNameList = {"No Journal Selected"};
     String[] noDateList = {""};
     String[] noDescriptionList = {"Please select a journal"};
-    int[] noImages = {R.drawable.whitebackground};
+    int[] noImages = {R.drawable.whitesquare};
 
     //PARIS DATA
     String[] parisNameList = {"Eiffel Tower", "City","Louvre","Arc De Triomphe", "Hotel Room View"};

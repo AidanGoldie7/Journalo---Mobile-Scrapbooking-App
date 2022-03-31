@@ -17,20 +17,22 @@ public class HomeActivity extends AppCompatActivity {
 
 
         //assign button variable to created button
-        Button button = (Button) findViewById(R.id.btn_journals);
-        Button button1 = (Button) findViewById(R.id.btn_mvp);
+        Button buttonAdd = (Button) findViewById(R.id.btn_journals);
+        Button buttonJournals = (Button) findViewById(R.id.btn_mvp);
         Button buttonHome = (Button) findViewById(R.id.btn_home);
 
-        //on button click
-        button.setOnClickListener(new View.OnClickListener() {
+        //on + button click
+        buttonAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //click handling code
-                openActivityJournals();
+                //when clicked, OpenActivityAddJournal method
+                openActivityAddJournal();
             }
         });
 
-        button1.setOnClickListener(new View.OnClickListener(){
+
+        buttonJournals.setOnClickListener(new View.OnClickListener(){
             @Override
                     public void onClick(View view) {
                 openActivityDisplay();
@@ -51,7 +53,7 @@ public class HomeActivity extends AppCompatActivity {
 
 
 
-    public void openActivityJournals(){
+    public void openActivityAddJournal(){
         //intent to navigate to journals page
         Intent intent = new Intent(HomeActivity.this, JournalsActivity.class);
         startActivity(intent);

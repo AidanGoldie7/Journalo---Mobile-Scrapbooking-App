@@ -28,8 +28,8 @@ public class JournalsActivity extends AppCompatActivity implements AdapterView.O
         setContentView(R.layout.activity_journals);
 
         //assign button variable to buttons
-        Button button = (Button)findViewById(R.id.btn_home);
-        Button button1 = (Button)findViewById(R.id.btn_clear);
+        Button buttonHome = (Button)findViewById(R.id.btn_home);
+        Button buttonClear = (Button)findViewById(R.id.btn_clear);
         Button buttonupload = (Button)findViewById(R.id.btnUpload);
         Button buttonAdd = (Button)findViewById(R.id.btn_journals2);
         Button buttonSubmit = (Button)findViewById(R.id.btn_submit);
@@ -43,7 +43,7 @@ public class JournalsActivity extends AppCompatActivity implements AdapterView.O
 
 
         //home button click
-        button.setOnClickListener(new View.OnClickListener() {
+        buttonHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //click handling code
@@ -69,12 +69,13 @@ public class JournalsActivity extends AppCompatActivity implements AdapterView.O
         });
 
         //clear button click
-        button1.setOnClickListener(new View.OnClickListener() {
+        buttonClear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //click handling code
                 title.setText("");
                 description.setText("");
+                journalDate.setText("");
                 clickCLear();
             }
         });
@@ -99,7 +100,7 @@ public class JournalsActivity extends AppCompatActivity implements AdapterView.O
                     submitFail();
                 }
                 else{
-                    clickSubmit();
+                    submitSuccess();
                 }
             }
         });
@@ -146,7 +147,7 @@ public class JournalsActivity extends AppCompatActivity implements AdapterView.O
         Toast.makeText(this, "Cleared", Toast.LENGTH_SHORT).show();
     }
 
-    public void clickSubmit(){
+    public void submitSuccess(){
         //display toast message
         Toast.makeText(this, "Saving to cloud...", Toast.LENGTH_SHORT).show();
     }
