@@ -4,11 +4,9 @@
     //spinner options
     <string-array name = "Places">
         <item></item>
-        <item>Paris</item>
-        <item>New York</item>
-        <item>Tokyo</item>
         <item>Budapest</item>
         <item>Craig and Kims Wedding</item>
         <item>Picnic with family</item>
+        <item>Tokyo</item>
     </string-array>
 </resources>

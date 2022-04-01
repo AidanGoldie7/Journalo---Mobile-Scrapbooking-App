@@ -99,7 +99,7 @@ public class JournalsActivity extends AppCompatActivity implements AdapterView.O
             @Override
             public void onClick(View view) {
                 //click handling code
-                if (TextUtils.isEmpty(title.getText()) || TextUtils.isEmpty(description.getText()) || TextUtils.isEmpty(journalTitle.getText()) || TextUtils.isEmpty((journalDate.getText())))
+                if (TextUtils.isEmpty(title.getText()) || TextUtils.isEmpty(description.getText()) || TextUtils.isEmpty(journalTitle.getText()) || TextUtils.isEmpty((journalDate.getText())) || imagePreview.getDrawable().equals(R.drawable.noimage))
                 {
                     submitFail();
                 }

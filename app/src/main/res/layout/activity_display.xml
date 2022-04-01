@@ -17,8 +17,9 @@
         android:ellipsize="end"
         android:gravity="center"
         android:maxLines="1"
-        android:text="Select Journal :"
-        android:textColor="#000000" />
+        android:text="Select a journal from the dropdown menu below :"
+        android:textColor="#000000"
+        android:textStyle="bold" />
 
     <Spinner
         android:id="@+id/selector"
